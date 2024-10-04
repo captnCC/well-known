@@ -1,0 +1,13 @@
+files:
+  test:
+    content: test
+    headers:
+      Content-Type: text/plain
+  other:
+    content:  |
+      {
+        "key": "value"
+      }
+    headers:
+      Content-Type: application/json
+      X-Custom-Header: value
