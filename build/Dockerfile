@@ -9,7 +9,7 @@ RUN go mod download
 COPY . .
 
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /wellknown ./cmd
+RUN CGO_ENABLED=0 GOOS=linux go build -o /wellknown ./cmd/well-known
 
 # Deploy the application binary into a lean image
 FROM gcr.io/distroless/base-debian12 AS build-release-stage

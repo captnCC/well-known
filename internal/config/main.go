@@ -14,8 +14,8 @@ type Config struct {
 	Files map[string]FileEntry `yaml:"files"`
 }
 
-func ReadConfig() (error, Config) {
-	yamlData, err := os.ReadFile("/etc/well-known/config.yaml")
+func ReadConfig(path string) (error, Config) {
+	yamlData, err := os.ReadFile(path)
 
 	if err != nil {
 		return err, Config{}
